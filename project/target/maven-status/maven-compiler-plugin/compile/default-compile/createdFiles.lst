@@ -1,7 +1,6 @@
-BuilderBlueprintTest.class
-ConcreteRegexBuilder.class
+Product.class
+Factory.class
+ConcreteProductA.class
+ConcreteProductB.class
+FactoryBlueprintTest.class
 StopAfterFailureExtension.class
-RegexDirector.class
-RegexBuilder.class
-Regex.class
-ExerciseRunner.class

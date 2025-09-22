@@ -1,7 +1,6 @@
-./src/main/java/BuilderBlueprint_test.java
-./src/main/java/Regex.java
-./src/main/java/ExerciseRunner.java
-./src/main/java/RegexDirector.java
-./src/main/java/RegexBuilder.java
+./src/main/java/FactoryBlueprint_test.java
+./src/main/java/ConcreteProductB.java
+./src/main/java/Product.java
+./src/main/java/Factory.java
+./src/main/java/ConcreteProductA.java
 ./src/main/java/StopAfterFailureExtension.java
-./src/main/java/ConcreteRegexBuilder.java
