@@ -1,0 +1,95 @@
+// CircularLinkedList Example (with Interface)
+
+public class CircularLinkedListDemo {
+    public static void main(String[] args) {
+        LinkedList list = new CircularLinkedList();
+        list.add(11);
+        list.add(22);
+        list.add(33);
+        System.out.println("Element at index 0: " + list.at(0));
+        System.out.println("Element at index 1: " + list.at(1));
+        System.out.println("Element at index 2: " + list.at(2));
+        list.remove(1);
+        System.out.println("Element at index 1 after removal: " + list.at(1));
+        System.out.println("Size: " + list.size());
+    }
+}
+
+interface LinkedList {
+    int at(int index);
+    void add(int value);
+    void remove(int index);
+    int size();
+}
+
+class CircularLinkedList implements LinkedList {
+    private Node head;
+    private int size;
+
+    private class Node {
+        int value;
+        Node next;
+        Node(int value) { this.value = value; }
+    }
+
+    @Override
+    public int at(int index) {
+        if (index < 0 || size == 0) return -1;
+        Node current = head;
+        for (int i = 0; i < index; i++) {
+            current = next(current);
+        }
+        return current.value;
+    }
+
+    @Override
+    public void add(int value) {
+        Node newNode = new Node(value);
+        if (head == null) {
+            head = newNode;
+            newNode.next = head;
+        } else {
+            Node current = head;
+            while (current.next != head) {
+                current = next(current);
+            }
+            current.next = newNode;
+            newNode.next = head;
+        }
+        size++;
+    }
+
+    @Override
+    public void remove(int index) {
+        if (size == 0 || index < 0) return;
+        index = index % size;
+        if (size == 1 && index == 0) {
+            head = null;
+            size = 0;
+            return;
+        }
+        if (index == 0) {
+            Node tail = head;
+            while (tail.next != head) {
+                tail = next(tail);
+            }
+            head = head.next;
+            tail.next = head;
+        } else {
+            Node prev = head;
+            for (int i = 0; i < index - 1; i++) {
+                prev = next(prev);
+            }
+            prev.next = next(prev.next);
+        }
+        size--;
+    }
+
+    @Override
+    public int size() { return size; }
+
+    private Node next(Node node) {
+        System.out.println("Go to next node");
+        return node.next;
+    }
+}

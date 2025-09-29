@@ -1,0 +1,100 @@
+// DoubleLinkedList Example (with Interface)
+
+public class DoubleLinkedListDemo {
+    public static void main(String[] args) {
+        LinkedList list = new DoubleLinkedList();
+        list.add(100);
+        list.add(200);
+        list.add(300);
+
+        System.out.println("Element at index 0: " + list.at(0));
+        System.out.println("Element at index 1: " + list.at(1));
+        System.out.println("Element at index 2: " + list.at(2));
+
+        list.remove(1);
+        System.out.println("Element at index 1 after removal: " + list.at(1));
+        System.out.println("Size: " + list.size());
+    }
+}
+
+interface LinkedList {
+    int at(int index);
+    void add(int value);
+    void remove(int index);
+    int size();
+}
+
+class DoubleLinkedList implements LinkedList {
+    private Node head, tail;
+    private int size;
+
+    private class Node {
+        int value;
+        Node next, prev;
+        Node(int value) { this.value = value; }
+    }
+
+    private Node next(Node node) {
+        System.out.println("Go to next node");
+        return node.next;
+    }
+
+    private Node prev(Node node) {
+        System.out.println("Go to previous node");
+        return node.prev;
+    }
+
+    // Efficient node traversal using both directions
+    private Node getNode(int index) {
+        if (index < (size + 1) / 2) {
+            Node current = head;
+            for (int i = 0; i < index; i++) current = next(current);
+            return current;
+        } else {
+            Node current = tail;
+            for (int i = size - 1; i > index; i--) current = prev(current);
+            return current;
+        }
+    }
+
+    @Override
+    public int at(int index) {
+        if (index < 0 || index >= size) return -1;
+        return getNode(index).value;
+    }
+
+    @Override
+    public void add(int value) {
+        Node newNode = new Node(value);
+        if (head == null) head = tail = newNode;
+        else {
+            tail.next = newNode;
+            newNode.prev = tail;
+            tail = newNode;
+        }
+        size++;
+    }
+
+    @Override
+    public void remove(int index) {
+        if (index < 0 || index >= size) return;
+        if (index == 0) {
+            if (head == tail) head = tail = null;
+            else {
+                head = head.next;
+                head.prev = null;
+            }
+        } else if (index == size - 1) {
+            tail = tail.prev;
+            tail.next = null;
+        } else {
+            Node current = getNode(index);
+            current.prev.next = current.next;
+            current.next.prev = current.prev;
+        }
+        size--;
+    }
+
+    @Override
+    public int size() { return size; }
+}

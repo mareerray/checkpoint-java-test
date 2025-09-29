@@ -1,5 +1,5 @@
 ./src/main/java/LinkedList.java
 ./src/main/java/ExerciseRunner.java
-./src/main/java/DoubleLinkedList.java
+./src/main/java/CircularLinkedList.java
 ./src/main/java/StopAfterFailureExtension.java
-./src/main/java/DoubleLinkedList_test.java
+./src/main/java/CircularLinkedList_test.java
