@@ -1,4 +1,4 @@
 ./src/main/java/ExerciseRunner.java
-./src/main/java/FirstUnique.java
+./src/main/java/LongestCommonPrefix_test.java
+./src/main/java/LongestCommonPrefix.java
 ./src/main/java/StopAfterFailureExtension.java
-./src/main/java/FirstUnique_test.java
