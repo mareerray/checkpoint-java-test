@@ -1,0 +1,32 @@
+import java.util.*;
+
+public class FirstUnique {
+    public char findFirstUnique(String s) {
+        Map<Character, Integer> count = new HashMap<>();
+        char[] charArray = s.toCharArray();
+        for (char c : charArray) {
+            count.put(c, count.getOrDefault(c, 0) + 1);
+            System.out.println("After adding '" + c + "': " + count);
+        }
+        for (char c : charArray)
+            if (count.get(c) == 1)
+                return c;
+        return '_';
+    }
+
+    public static void main(String[] args) {
+        FirstUnique firstUnique = new FirstUnique();
+
+        String s1 = "leetcode";
+        System.out.println("Input: " + s1);
+        System.out.println("First unique character: " + firstUnique.findFirstUnique(s1));
+
+        String s2 = "loveleetcode";
+        System.out.println("Input: " + s2);
+        System.out.println("First unique character: " + firstUnique.findFirstUnique(s2));
+
+        String s3 = "aabbcc";
+        System.out.println("Input: " + s3);
+        System.out.println("First unique character: " + firstUnique.findFirstUnique(s3));
+    }
+}

@@ -1,6 +1,4 @@
-CircularLinkedList$Node.class
 ExerciseRunner.class
-CircularLinkedListTest.class
-CircularLinkedList.class
+FirstUnique.class
+FirstUniqueTest.class
 StopAfterFailureExtension.class
-LinkedList.class
