@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 @ExtendWith(StopAfterFailureExtension.class)
-class DistinctSubstringLenghtTest {
+class DistinctSubstringLengthTest {
     private DistinctSubstringLength finder;
 
     @BeforeEach

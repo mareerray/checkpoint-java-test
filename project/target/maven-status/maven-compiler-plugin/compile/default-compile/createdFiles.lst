@@ -1,4 +1,4 @@
-LongestCommonPrefix.class
+DistinctSubstringLength.class
+DistinctSubstringLengthTest.class
 ExerciseRunner.class
-LongestCommonPrefixTest.class
 StopAfterFailureExtension.class

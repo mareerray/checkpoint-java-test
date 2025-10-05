@@ -1,4 +1,4 @@
+./src/main/java/DistinctSubstringLength.java
 ./src/main/java/ExerciseRunner.java
-./src/main/java/LongestCommonPrefix_test.java
-./src/main/java/LongestCommonPrefix.java
+./src/main/java/DistinctSubstringLength_test.java
 ./src/main/java/StopAfterFailureExtension.java
