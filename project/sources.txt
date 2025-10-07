@@ -1,3 +1,4 @@
-./src/main/java/TopFrequents.java
-./src/main/java/TopFrequents_test.java
+./src/main/java/ExerciseRunner.java
+./src/main/java/HarmoniousFusion_test.java
+./src/main/java/HarmoniousFusion.java
 ./src/main/java/StopAfterFailureExtension.java
