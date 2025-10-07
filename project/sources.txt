@@ -1,4 +1,3 @@
-./src/main/java/AnagramChecker.java
-./src/main/java/IsAnagram_test.java
-./src/main/java/ExerciseRunner.java
+./src/main/java/TopFrequents.java
+./src/main/java/TopFrequents_test.java
 ./src/main/java/StopAfterFailureExtension.java
