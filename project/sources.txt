@@ -1,4 +1,6 @@
-./src/main/java/ExerciseRunner.java
-./src/main/java/HarmoniousFusion_test.java
-./src/main/java/HarmoniousFusion.java
+./src/main/java/FactoryBlueprint_test.java
+./src/main/java/ConcreteProductB.java
+./src/main/java/Product.java
+./src/main/java/Factory.java
+./src/main/java/ConcreteProductA.java
 ./src/main/java/StopAfterFailureExtension.java

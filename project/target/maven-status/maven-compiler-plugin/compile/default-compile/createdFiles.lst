@@ -1,4 +1,6 @@
-HarmoniousFusion.class
-ExerciseRunner.class
-HarmoniousFusionTest.class
+Product.class
+Factory.class
+ConcreteProductA.class
+ConcreteProductB.class
+FactoryBlueprintTest.class
 StopAfterFailureExtension.class
