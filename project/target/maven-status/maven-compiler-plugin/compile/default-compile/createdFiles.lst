@@ -1,6 +1,6 @@
-Product.class
-Factory.class
-ConcreteProductA.class
-ConcreteProductB.class
-FactoryBlueprintTest.class
+Task.class
+ExerciseRunner.class
+TaskStatus.class
+TodoListTest.class
+TodoList.class
 StopAfterFailureExtension.class
